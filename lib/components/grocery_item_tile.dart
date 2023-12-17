@@ -4,10 +4,10 @@ class GroceryItemTile extends StatelessWidget {
   final String itemName;
   final String itemPrice;
   final String imagePath;
-  final color;
-  void Function()? onPressed;
+  final dynamic color;
+  final void Function()? onPressed;
 
-  GroceryItemTile({
+  const GroceryItemTile({
     super.key,
     required this.itemName,
     required this.itemPrice,
@@ -41,7 +41,7 @@ class GroceryItemTile extends StatelessWidget {
             // item name
             Text(
               itemName,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 16,
               ),
             ),
@@ -50,8 +50,8 @@ class GroceryItemTile extends StatelessWidget {
               onPressed: onPressed,
               color: color,
               child: Text(
-                '\$' + itemPrice,
-                style: TextStyle(
+                '\$ + $itemPrice',
+                style: const TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
