@@ -119,7 +119,8 @@ class _HomePageState extends State<HomePage> {
                   itemCount: value.shopItems.length,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
-                    childAspectRatio: 1 / 1.2,
+                    childAspectRatio:
+                        1 / 1.2, // width / height (default value is 1)
                   ),
                   itemBuilder: (context, index) {
                     return GroceryItemTile(
